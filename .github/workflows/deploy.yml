@@ -1,4 +1,4 @@
-name: Get Token from Surge
+name: Deploy to Surge
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  get-token:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,8 +21,8 @@ jobs:
       - name: Install Surge
         run: npm install -g surge
 
-      - name: Fetch My Token
-        run: surge token
+      - name: Deploy to Surge.sh
+        run: surge . --domain wologirl-final-project.surge.sh
         env:
-          SURGE_LOGIN: 'woloigrifauho@gmail.com'
-          SURGE_TOKEN: 'mm241654'
+          SURGE_LOGIN: 'wologirl.project2026@gmail.com'
+          SURGE_TOKEN: 'woloNewPass2026'
