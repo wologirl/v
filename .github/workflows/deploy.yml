@@ -16,10 +16,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 20
 
       - name: Install Surge
         run: npm install -g surge
 
       - name: Deploy to Surge.sh
-        run: surge . wologirl-project.surge.sh --username woloigrifauho@gmail.com --password mm241654
+        run: surge . wologirl-project.surge.sh
+        env:
+          SURGE_LOGIN: 'woloigrifauho@gmail.com'
+          SURGE_TOKEN: 'mm241654'
