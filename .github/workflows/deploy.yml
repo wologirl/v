@@ -22,7 +22,8 @@ jobs:
         run: npm install -g surge
 
       - name: Deploy to Surge.sh
-        run: surge . wologirl-project.surge.sh
+        run: surge . --domain wologirl-project.surge.sh
         env:
           SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
           SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+
