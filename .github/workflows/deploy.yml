@@ -21,8 +21,5 @@ jobs:
       - name: Install Surge
         run: npm install -g surge
 
-      - name: Deploy to Surge.sh
-        run: surge . --domain wologirl-web-project.surge.sh
-        env:
-          SURGE_LOGIN: 'woloigrifauho@gmail.com'
-          SURGE_TOKEN: 'mm241654'
+           - name: Deploy to Surge.sh
+        run: surge . --domain wologirl-web-project.surge.sh --login woloigrifauho@gmail.com --token mm241654
