@@ -22,4 +22,7 @@ jobs:
         run: npm install -g surge
 
       - name: Fetch My Token
-        run: surge token --login woloigrifauho@gmail.com --password mm241654
+        run: surge token
+        env:
+          SURGE_LOGIN: 'woloigrifauho@gmail.com'
+          SURGE_TOKEN: 'mm241654'
